@@ -56,13 +56,16 @@ class Calculator {
                 this.processDelOperator();
                 break;
             case "CE":
-                this.clearCurrentOperation(); 
+                this.clearCurrentOperation();
+                break;
             case "C":
                 this.processClearOperation();
+                break;
             case "=":
                 this.processEqualOperator();
                 this.currentOperationText.innerHTML = this.previousOperationText.innerHTML.split(' ')[0];
-                this.previousOperationText.innerHTML = '';           
+                this.previousOperationText.innerHTML = '';
+                break;
             default:
                 return;
         }
